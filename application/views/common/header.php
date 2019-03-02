@@ -11,7 +11,7 @@
   <!-- Bootstrap core CSS -->
   <link href="<?= base_url('assets/mdb/css/bootstrap.min.css') ?>" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="<?= base_url('assets/mdb/"css/mdb.min.css')?>" rel="stylesheet">
+  <link href="<?= base_url('assets/mdb/css/mdb.min.css')?>" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="<?= base_url('assets/mdb/css/style.css') ?>" rel="stylesheet">
 </head>
