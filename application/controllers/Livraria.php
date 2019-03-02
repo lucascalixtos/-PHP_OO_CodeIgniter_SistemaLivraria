@@ -8,3 +8,4 @@ class Livraria extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 }
+?>
