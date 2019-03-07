@@ -51,15 +51,15 @@ include_once APPPATH.'libraries/Livro.php';
                 $count = 0;
             }
         }*/
-        $html .= '<table class="table mx-auto">';
-        $html .= '<tr><th scope="col">Capa</th><th scope="col">Titulo</th><th scope="col">Autor</th><th scope="col">Gênero</th><th scope="col">Preço</th></tr>';
+        $html .= '<table class="table mx-auto align-middle" >';
+        $html .= '<tr><th scope="col" class="align-middle">Capa</th><th scope="col" class="align-middle">Titulo</th><th scope="col" class="align-middle">Autor</th><th scope="col" class="align-middle">Gênero</th><th scope="col" class="align-middle">Preço</th></tr>';
         foreach($data as $row){
             $html .= '<tr>';
             $html .= '<th scope="col"><img src="'.$row['capa'].'" width="120px"></th>';
             $html .= '<th scope="col">'.$row['titulo'].'</th>';
             $html .= '<th scope="col">'.$row['autor'].'</th>';
             $html .= '<th scope="col">'.$row['genero'].'</th>';
-            $html .= '<th>R$'.$row['preco'].',00</th></tr>';
+            $html .= '<th><button type="button" class="btn btn-dark">R$'.$row['preco'].',00</button></th></tr>';
             }
                 $html .= '</table>';
                 return $html;
