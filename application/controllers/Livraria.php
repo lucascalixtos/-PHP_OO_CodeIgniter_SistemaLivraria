@@ -24,6 +24,8 @@ class Livraria extends CI_Controller {
         $this->load->view('common/header');
         $this->load->view('common/navbar');
         if(sizeof($_POST) > 0) print_r($_POST);
+        $this->load->model('LivroModel', 'model');
+        $this->model->criar();
         $this->load->view('elementos/cadastro_livro');
 
         $this->load->view('common/footer');
