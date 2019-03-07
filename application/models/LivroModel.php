@@ -25,73 +25,46 @@ include_once APPPATH.'libraries/Livro.php';
         $livro = new Livro();
         // organiza a lista e depois retorna o resultado
         $data = $livro->getAll();
-        
-        $linhaatual = 0;
-        
-        /*foreach($data as $row){
-            if($linhaatual % 3 == 0){
-                $html ='<div class="row">';
-            }
-            
-            $html .= '<div class="col-md-4">';
-            $html .= '  <div class="card"> 
-                            <div class="view overlay">';
-            $html .= '          <img class="card-img-top" src="'.$row['capa'].'" alt="Card image cap">';
-            $html .= '          <a> <div class="mask rgba-white-slight"></div></a> 
-                            </div>';
-            $html .= '      <div class="card-body elegant-color white-text rounded-bottom">';
-            $html .= '          <h4 class="card-title">'.$row['titulo'].'</h4>';
-            $html .= '          <p class="card-text white-text mb-4">'.$row['descr'].'</p>';
-            $html .= '           <a href="#!" class="white-text d-flex justify-content-end"><h5>Comprar <i class="fas fa-angle-double-right"></i></h5></a>';
-            $html .= '      </div>
-                        </div>';
-            $html .= '</div>';
-            if($linhaatual % 3 == 0){
-                $html ='</div>';
-            }
-            $linhaatual++;
-            
-        }
-        $html ='</div>';*/
-        $contador = 0;
+       
+        //FUNCIONANDO:
+        /*$count = 0;
         foreach($data as $row){
-            if($contador % 3 == 0){
-                $html .= '<div class="row">';
+            if($count ==0){
+                $html .= '<div class="row mb-4">';
             }
-            $html .= '<div class="col-sm-3">';
-            $html .= '<div class="card"> <div class="view overlay">';
-            $html .= '<img class="card-img-top" src="'.$row['capa'].'" alt="Card image cap">';
-            $html .= '<a> <div class="mask rgba-white-slight"></div></a> </div>';
-            $html .= '<div class="card-body elegant-color white-text rounded-bottom">';
-            $html .= '<h4 class="card-title">'.$row['titulo'].'</h4>';
-            $html .= '<p class="card-text white-text mb-4">'.$row['descr'].'</p>';
-            $html .= '<a href="#!" class="white-text d-flex justify-content-end"><h5>Preço: '.$row['preco'].' <i class="fas fa-angle-double-right"></i></h5></a>';
-            $html .= '  </div>
-            </div>';
+            $html .= '<div class="col-md-4">';
+            $html .= '<div class="card">';
+            
+            
+            $html .= '<img src="'.$row['capa'].'" width="210px">';
+            $html .=  '<h4 class="card-title">'.$row['titulo'].'</h4>';
+     
             $html .= '</div>';
-            if($contador % 3 == 0){
+            $html .= '</div>';
+
+            $count++;
+
+            if($count == 0){
                 $html .= '</div>';
+            }else 
+            if($count == 3){
+                $count = 0;
             }
-            $contador++;
-        }
-        
-
-        return $html;
-    }
-
- }
-
-    /*foreach($data as $row){
-            $html .= '<div class="card"> <div class="view overlay">';
-            $html .= '<img class="card-img-top" src="'.$row['capa'].'" alt="Card image cap">';
-            $html .= '<a> <div class="mask rgba-white-slight"></div></a> </div>';
-            $html .= '<div class="card-body elegant-color white-text rounded-bottom">';
-            $html .= '<h4 class="card-title">'.$row['titulo'].'</h4>';
-            $html .= '<p class="card-text white-text mb-4">'.$row['descr'].'</p>';
-            $html .= '<a href="#!" class="white-text d-flex justify-content-end"><h5>Comprar <i class="fas fa-angle-double-right"></i></h5></a>';
-            $html .= '  </div>
-            </div>';
         }*/
+        $html .= '<table class="table mx-auto">';
+        $html .= '<tr><th scope="col">Capa</th><th scope="col">Titulo</th><th scope="col">Autor</th><th scope="col">Gênero</th><th scope="col">Preço</th></tr>';
+        foreach($data as $row){
+            $html .= '<tr>';
+            $html .= '<th scope="col"><img src="'.$row['capa'].'" width="120px"></th>';
+            $html .= '<th scope="col">'.$row['titulo'].'</th>';
+            $html .= '<th scope="col">'.$row['autor'].'</th>';
+            $html .= '<th scope="col">'.$row['genero'].'</th>';
+            $html .= '<th>R$'.$row['preco'].',00</th></tr>';
+            }
+                $html .= '</table>';
+                return $html;
+        }
 
+    }
 
 ?>
