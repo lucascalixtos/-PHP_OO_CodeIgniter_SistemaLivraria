@@ -13,7 +13,7 @@
         
         <input type="text" name="idioma" id="idioma" class="form-control" placeholder="Idioma">
 
-        <input type="text" name="capa" id="capa" class="form-control" value="assets/mdb/img/*.jpg" placeholder="Capa">
+        <input type="text" name="capa" id="capa" class="form-control" value="../../assets/img/*.jpg" placeholder="Capa">
         
         <input type="text" name="descr" id="descr" class="form-control" placeholder="Descrição">
         
