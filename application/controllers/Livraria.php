@@ -17,13 +17,16 @@ class Livraria extends CI_Controller {
     public function livros(){
 		$this->load->view('common/header');
         $this->load->view('common/navbar');
+        $this->load->model('LivroModel', 'model');
+        $v['listar'] = $this->model->lista();
+        $this->load->view('elementos/livros_view', $v); 
+
         $this->load->view('common/footer');
     }
 
     public function insere_livro(){
         $this->load->view('common/header');
         $this->load->view('common/navbar');
-        if(sizeof($_POST) > 0) print_r($_POST);
         $this->load->model('LivroModel', 'model');
         $this->model->criar();
         $this->load->view('elementos/cadastro_livro');
