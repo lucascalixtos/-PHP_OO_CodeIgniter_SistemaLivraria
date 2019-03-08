@@ -1,6 +1,6 @@
 <!--Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark default-color">
-  <a class="navbar-brand" href="<?php echo site_url('Livraria/index')?>">Nobel</a>
+  <a class="navbar-brand" href="<?php echo site_url()?>">Nobel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,15 +8,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('Livraria/index')?>">Inicio
+        <a class="nav-link" href="<?php echo site_url();?>">Inicio
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Livraria/livros')?>">Livros</a>
+        <a class="nav-link" href="<?php echo site_url('livros')?>">Livros</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Livraria/contato')?>">Contato</a>
+        <a class="nav-link" href="<?php echo site_url('contato')?>">Contato</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"

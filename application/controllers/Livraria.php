@@ -35,6 +35,7 @@ class Livraria extends CI_Controller {
     }
 
     public function contato(){
+        $this->load->helper('form');
         $this->load->view('common/header');
         $this->load->view('common/navbar');
         $v['mapa'] = $this->load->view('elementos/mapa', '', true);

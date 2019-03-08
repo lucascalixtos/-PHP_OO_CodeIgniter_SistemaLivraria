@@ -1,130 +1,37 @@
-<!-- Section: Contact v.3 -->
-<section class="contact-section my-5">
 
-  <!-- Form with header -->
-  <div class="card">
+<form class="text-center border border-light p-5">
 
-    <!-- Grid row -->
-    <div class="row">
+    <p class="h4 mb-4">Contact us</p>
 
-      <!-- Grid column -->
-      <div class="col-lg-8">
+    <!-- Name -->
+    <input type="text" name="nome"  id="nome" class="form-control mb-4" placeholder="Name">
 
-        <div class="card-body form">
+    <!-- Email -->
+    <input type="email" name="email" id="email" class="form-control mb-4" placeholder="E-mail">
 
-          <!-- Header -->
-          <h3 class="mt-4"><i class="fas fa-envelope pr-2"></i>Entre em contato conosco: </h3>
+    <!-- Subject -->
+    <label>Assunto</label>
+    <select class="browser-default custom-select mb-4" id="assunto" name="assunto">
+        <option value="" disabled>Escolha uma opção</option>
+        <option value="1" selected>Feedback</option>
+        <option value="2">Reclamção</option>
+        <option value="3">Opinião</option>
+        <option value="4">Pedido</option>
+    </select>
 
-          <!-- Grid row -->
-          <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-name" class="form-control">
-                <label for="form-contact-name" class="">Seu nome</label>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-email" class="form-control">
-                <label for="form-contact-email" class="">Seu email</label>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
-
-          <!-- Grid row -->
-          <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-phone" class="form-control">
-                <label for="form-contact-phone" class="">Seu telefone</label>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-company" class="form-control">
-                <label for="form-contact-company" class="">Your company</label>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
-
-          <!-- Grid row -->
-          <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-12">
-              <div class="md-form mb-0">
-                <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
-                <label for="form-contact-message">Your message</label>
-                <a class="btn-floating btn-lg blue">
-                  <i class="far fa-paper-plane"></i>
-                </a>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-4">
-
-        <div class="card-body contact text-center h-100 black-text">
-
-          <h3 class="my-4 pb-2">Contact information</h3>
-          <ul class="text-lg-left list-unstyled ml-4">
-            <li>
-              <p><i class="fas fa-map-marker-alt pr-2"></i>New York, 94126, USA</p>
-            </li>
-            <li>
-              <p><i class="fas fa-phone pr-2"></i>+ 01 234 567 89</p>
-            </li>
-            <li>
-              <p><i class="fas fa-envelope pr-2"></i>contact@example.com</p>
-            </li>
-          </ul>
-          <hr class="hr-light my-4">
-          <ul class="list-inline text-center list-unstyled">
-            <li class="list-inline-item">
-              <a class="p-2 fa-lg tw-ic">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="p-2 fa-lg li-ic">
-                <i class="fab fa-linkedin-in"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="p-2 fa-lg ins-ic">
-                <i class="fab fa-instagram"> </i>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-
+    <!-- Message -->
+    <div class="form-group">
+        <textarea class="form-control rounded-0" name="mensagem" id="mensagem" rows="3" placeholder="Mensagem"></textarea>
     </div>
 
-  </div>
+    <!-- Copy -->
+    <div class="custom-control custom-checkbox mb-4">
+        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+    </div>
 
-</section>
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit">Enviar</button>
+
+</form>
+<!-- Default form contact -->

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 include_once APPPATH.'libraries/Livro.php';
 
- class LivroModel extends CI_Controller{
+ class LivroModel extends CI_Model{
 
     public function criar(){
         if(sizeof($_POST) == 0) return;
