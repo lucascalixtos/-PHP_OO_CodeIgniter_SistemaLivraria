@@ -3,6 +3,7 @@
   <script type="text/javascript" src="<?= base_url('assets/mdb/js/bootstrap.min.js') ?>"></script>
   <script type="text/javascript" src="<?= base_url('assets/mdb/js/mdb.js') ?>"></script>
   <script type="text/javascript">new WOW().init();</script>
+  </div>
 </body>
 
 </html>

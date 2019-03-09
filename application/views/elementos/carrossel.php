@@ -11,17 +11,17 @@
   <div class="carousel-inner" role="listbox">
     <!--First slide-->
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+      <img class="d-block w-100" src="<?= base_url('assets/img/c1.jpg') ?>" width="1600px" height="700px" alt="First slide">
     </div>
     <!--/First slide-->
     <!--Second slide-->
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+      <img class="d-block w-100" src="<?= base_url('assets/img/c2.png') ?>" width="1600px" height="700px" alt="Second slide">
     </div>
     <!--/Second slide-->
     <!--Third slide-->
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+      <img class="d-block w-100" src="<?= base_url('assets/img/c1.jpg') ?>" width="1600px" height="700px" alt="Third slide">
     </div>
     <!--/Third slide-->
   </div>

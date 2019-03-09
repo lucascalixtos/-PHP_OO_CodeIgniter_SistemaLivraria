@@ -36,6 +36,12 @@ class Livro{
         $res = $this->db->query($sql);
         return $res->result_array();
      }
+
+     /*public function exibe($id){
+        $sql = "SELECT * FROM livros WHERE 'id = $id'";
+        $res = $this->db->query($sql);
+        return $res->result_array();
+     }*/
     
   
 }

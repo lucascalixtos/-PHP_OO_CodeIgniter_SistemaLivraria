@@ -1,50 +1,10 @@
-.map-container{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-container iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
-.view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
-    background-size: cover;
-}
-
-.navbar {
-    background-color: transparent;
-}
-
-.top-nav-collapse {
-    background-color: #4285F4;
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
-}
-
-html,
-body,
-header,
-.view {
-  height: 100%;
-}
-
-body, html {
-    height: 100%;
+body{
+    background-image: url("../assets/img/background.jpg");  
 }
 
 .bg {
     /* The image used */
-    background-image: url("/assets/img/background.jpg");
+    background-image: url("../assets/img/background.jpg");
   
     /* Full height */
     height: 100%;

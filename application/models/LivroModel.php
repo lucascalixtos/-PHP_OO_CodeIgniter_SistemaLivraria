@@ -51,11 +51,11 @@ include_once APPPATH.'libraries/Livro.php';
                 $count = 0;
             }
         }*/
-        $html .= '<table class="table mx-auto align-middle" >';
-        $html .= '<tr><th scope="col" class="align-middle">Capa</th><th scope="col" class="align-middle">Titulo</th><th scope="col" class="align-middle">Autor</th><th scope="col" class="align-middle">Gênero</th><th scope="col" class="align-middle">Preço</th></tr>';
+        $html .= '<table class="table mx-auto justify-content-center" >';
+        $html .= '<tr><th scope="col" class="justify-content-center" >Capa</th><th scope="col" >Titulo</th><th scope="col" >Autor</th><th scope="col" >Gênero</th><th scope="col">Preço</th></tr>';
         foreach($data as $row){
             $html .= '<tr>';
-            $html .= '<th scope="col"><img src="'.$row['capa'].'" width="120px"></th>';
+            $html .= '<th scope="col"><img src="'.base_url('assets/img/'.$row['capa']).'" width="120px"></th>';
             $html .= '<th scope="col">'.$row['titulo'].'</th>';
             $html .= '<th scope="col">'.$row['autor'].'</th>';
             $html .= '<th scope="col">'.$row['genero'].'</th>';
@@ -64,6 +64,11 @@ include_once APPPATH.'libraries/Livro.php';
                 $html .= '</table>';
                 return $html;
         }
+
+        /*public function exibir(){
+
+        }*/
+    
 
     }
 

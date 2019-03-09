@@ -6,6 +6,9 @@
             <div class="coluna co16">
             <h1>cadastro</h2>
             <?php
+                if($msg = get_msg()):
+                    echo '<p>'.$msg.'</p>';
+                endif;
                 echo form_open();
                 echo form_label('nome para login:', 'login');
                 echo form_input('login', set_value('login'), array('autofocus' => 'autofocus'));
