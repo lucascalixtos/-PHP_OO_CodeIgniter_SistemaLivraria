@@ -18,3 +18,14 @@ if(!function_exists('get_msg')):
         return $retorno;
     }
 endif;
+
+if(!function_exists('verifica_login')):
+    //retorna uma mensagem definida por set_msg
+    function verifica_login($redirect='setup/login'){
+        $ci = & get_instance();
+        if($ci->session->userdata('logged') != TRUE):
+            set_msg('<p>Acesso restrito! FAÇA LOGIN</p>');
+            redirect($redirect,'refresh');
+        endif;
+    }
+endif;
