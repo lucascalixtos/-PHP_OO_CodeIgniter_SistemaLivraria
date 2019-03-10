@@ -25,33 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `options`
+-- Estrutura da tabela `user`
 --
 
-CREATE TABLE `options` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `option_name` varchar(255) NOT NULL,
-  `option_value` text NOT NULL
+  `nome` varchar(30) NOT NULL,
+  `sobrenome` varchar(50) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
+  `senha` varchar(256) NOT NULL,
+  `last_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `options`
+-- Extraindo dados da tabela `user`
 --
 
-INSERT INTO `options` (`id`, `option_name`, `option_value`) VALUES
-(1, 'user_login', 'lucas'),
-(2, 'user_email', 'lucas@gmail.com'),
-(3, 'user_pass', '$2y$10$da4uxhWQ6tyhCCDnRrqrc.VJJySc5HD5hgvwMgbAUlxBlR79MRKRy'),
-(4, 'setup_executado', '1');
+INSERT INTO `user` (`id`, `nome`, `sobrenome`, `email`, `telefone`, `senha`, `last_modified`) VALUES
+(1, 'José ', 'Henrique', 'asdasd@fadfas.com', '54879874654', 'aaaaaaaaaaaaaa', '2019-03-05 02:42:10'),
+(2, 'Pedro ', 'Pereira', 'pedropereira@pedro.com', '400258922', 'pedropereira', '2019-03-05 02:46:39');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `options`
+-- Indexes for table `user`
 --
-ALTER TABLE `options`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +61,10 @@ ALTER TABLE `options`
 --
 
 --
--- AUTO_INCREMENT for table `options`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

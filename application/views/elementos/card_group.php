@@ -6,7 +6,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="<?= base_url('assets/img/'.$img1) ?>" alt="Card image cap">
+      <img class="card-img-top" width="700px" height="400px" src="<?= base_url('assets/img/'.$img1)?>" alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -20,7 +20,7 @@
       <!--Text-->
       <p class="card-text"><?= $label1 ?></p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Clique aqui</button>
+      <a href="<?= base_url('livros') ?>"><button type="button" class="btn btn-light-blue btn-md">Clique aqui</button></a>
 
     </div>
 
@@ -32,7 +32,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="<?= base_url('assets/img/'.$img2) ?>" alt="Card image cap">
+      <img class="card-img-top" width="700px" height="400px" src="<?= base_url('assets/img/'.$img2) ?>" alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -46,7 +46,7 @@
       <!--Text-->
       <p class="card-text"><?= $label2?></p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Clique aqui</button>
+      <a href="<?= base_url('contato') ?>"><button type="button" class="btn btn-light-blue btn-md">Clique aqui</button></a>
 
     </div>
 
@@ -58,7 +58,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="<?= base_url('assets/img/'.$img3) ?>" alt="Card image cap">
+      <img class="card-img-top" width="700px" height="400px"  src="<?= base_url('assets/img/'.$img3) ?>" alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -72,7 +72,7 @@
       <!--Text-->
       <p class="card-text"><?=$label3?></p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Clique aqui</button>
+      <a href="<?= base_url('sobre') ?>"><button type="button" class="btn btn-light-blue btn-md">Clique aqui</button></a>
 
     </div>
 

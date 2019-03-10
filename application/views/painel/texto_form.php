@@ -7,8 +7,8 @@
     <input type="text" name="titulo" id="titulo" class="form-control mb-4" placeholder="Titulo">
 
     <label for="textarea">Texto</label>
-    <textarea name="texto" id="texto" class="form-control mb-4" placeholder="Textarea"></textarea>
+    <textarea name="texto" id="texto" class="form-control mb-4" placeholder="Escreva aqui"></textarea>
 
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+    <button class="btn btn-info btn-block my-4" type="submit">Alterar</button>
 </form>
 </div>
