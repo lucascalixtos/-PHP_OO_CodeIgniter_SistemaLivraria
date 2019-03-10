@@ -7,7 +7,7 @@
     <a class="nav-link" href="<?= site_url('setup/modifica')?>">Modificar/Apagar livro</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#!">Modificar pagina inicial</a>
+    <a class="nav-link" href="<?= site_url('setup/modifica_inicio')?>">Modificar pagina inicial</a>
   </li>
 </ul>
 </div>

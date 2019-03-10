@@ -185,9 +185,25 @@ class Setup extends CI_Controller{
         $this->load->view('common/header');
         $this->load->view('painel/navbar_painel');
         $this->load->view('painel/mininav');
+        $this->load->view('painel/mininav2');
+        //Form carrossel
         $this->load->model('CarrosselModel');
         $this->CarrosselModel->criar();
-        $v['carrossel'] = $this->load->view('painel/carrossel_form', '', TRUE);
+        $v['form'] = $this->load->view('painel/carrossel_form', '', TRUE);
+        
+        $this->load->view('painel/modifica_inicio', $v);
+        $this->load->view('common/footer');
+    }
+
+    public function modifica_cards(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->view('painel/mininav2');
+        //Form cards
+        $this->load->model('CardModel');
+        $this->CardModel->criar();
+        $v['form'] = $this->load->view('painel/card_form','', TRUE);
         $this->load->view('painel/modifica_inicio', $v);
         $this->load->view('common/footer');
     }
