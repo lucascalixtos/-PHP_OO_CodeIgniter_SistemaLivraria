@@ -181,4 +181,15 @@ class Setup extends CI_Controller{
         redirect('setup/modifica');
     }
 
+    public function modifica_inicio(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->model('CarrosselModel');
+        $this->CarrosselModel->criar();
+        $v['carrossel'] = $this->load->view('painel/carrossel_form', '', TRUE);
+        $this->load->view('painel/modifica_inicio', $v);
+        $this->load->view('common/footer');
+    }
+
 }
