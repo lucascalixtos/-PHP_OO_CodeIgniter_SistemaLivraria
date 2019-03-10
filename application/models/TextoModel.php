@@ -32,6 +32,11 @@ include_once APPPATH.'libraries/Texto.php';
         return $maxid;
     }
 
+    /*public function carrega_texto($id){
+        $livro = new Livro();
+        return $livro->getById($id);
+    }*/
+
      
 }
 

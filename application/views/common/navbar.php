@@ -18,6 +18,9 @@
       <li class="nav-item text-secondary">
         <a class="nav-link text-secondary" href="<?php echo site_url('contato')?>">Contato</a>
       </li>
+      <li class="nav-item text-secondary">
+        <a class="nav-link text-secondary" href="<?php echo site_url('sobre')?>">Sobre nós</a>
+      </li>
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">

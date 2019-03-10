@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['livros'] = 'livraria/livros';
 $route['contato'] = 'livraria/contato';
+$route['sobre'] = 'livraria/sobre';
 $route['post'] = 'livraria';
 $route['post/(:num)'] = 'livraria/post/$1';
 $route['login'] = 'setup/login';

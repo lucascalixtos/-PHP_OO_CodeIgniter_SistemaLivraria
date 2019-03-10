@@ -33,7 +33,7 @@ class Livraria extends CI_Controller {
         $v['card'] = $this->load->view('elementos/card_group',$data,true);
 
         $this->load->model('TextoModel');
-        $data = $this->TextoModel->texto_data($card);
+        $data = $this->TextoModel->texto_data($texto);
         $v['texto_inicio'] = $this->load->view('elementos/texto_inicio',$data,true);
         $this->load->view('elementos/layout', $v);
 		$this->load->view('common/footer');
@@ -73,6 +73,15 @@ class Livraria extends CI_Controller {
         $data = $this->LivroModel->livro_data($id);
         $v['livro'] = $this->load->view('elementos/detalhes',$data,true);
         $this->load->view('elementos/layout_detalhar',$v);
+        $this->load->view('common/footer');
+    }
+
+    public function sobre(){
+        $this->load->view('common/header');
+        $this->load->view('common/navbar');
+        $v['sobre'] = $this->load->view('elementos/sobre','',TRUE);
+        $this->load->view('elementos/layout_sobre',$v);
+
         $this->load->view('common/footer');
     }
 

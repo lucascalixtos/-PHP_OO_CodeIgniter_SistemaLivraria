@@ -21,6 +21,13 @@
              $this->db->query($sql);
         }
 
+
+
+        public function getById($id){
+            $rs = $this->db->get_where('livros', "id = $id");
+           return $rs->row_array();
+        }
+
         
     }
 
