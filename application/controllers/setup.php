@@ -129,4 +129,56 @@ class Setup extends CI_Controller{
         set_msg('<p> Você saiu do painel</p>');
         redirect('','refresh');
     }
+
+    public function mudar(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        
+        $this->load->view('common/footer');
+    }
+
+    public function insere_livro(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->model('LivroModel', 'model');
+        $this->model->criar();
+        $data['titulo'] = "Cadastrar livro"; 
+        $data['acao'] = "Cadastrar"; 
+        $this->load->view('elementos/cadastro_livro', $data);
+        $this->load->view('common/footer');
+    }
+
+    public function modifica(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->model('LivroModel','model');
+        $v['editar'] = $this->model->lista_editar();
+        $this->load->view('painel/lista_editar', $v);
+        $this->load->view('common/footer');
+    }
+
+    public function edit($id){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->model('LivroModel', 'model');
+        $this->model->atualizar($id);
+
+        $data['titulo'] = "Editar livro"; 
+        $data['acao'] = "Atualizar"; 
+        $data['livro'] = $this->model->carrega_livro($id);
+
+        $this->load->view('elementos/cadastro_livro', $data);
+        $this->load->view('common/footer');
+    }
+
+    public function delete($id){
+        $this->load->model('LivroModel', 'model');
+        $this->model->delete($id);
+        redirect('setup/modifica');
+    }
+
 }

@@ -37,6 +37,20 @@ class Livro{
         return $res->result_array();
      }
 
+     public function getById($id){
+        $rs = $this->db->get_where('livros', "id = $id");
+       return $rs->row_array();
+    }
+
+     public function update($data, $id){
+        $this->db->update('livros', $data, "id = $id");
+        return $this->db->affected_rows();
+    }
+
+    public function delete($id){
+        $this->db->delete('livros', "id = $id");
+    }
+
      /*public function exibe($id){
         $sql = "SELECT * FROM livros WHERE 'id = $id'";
         $res = $this->db->query($sql);

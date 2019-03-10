@@ -25,16 +25,6 @@ class Livraria extends CI_Controller {
         $this->load->view('common/footer');
     }
 
-    public function insere_livro(){
-        $this->load->view('common/header');
-        $this->load->view('common/navbar');
-        $this->load->model('LivroModel', 'model');
-        $this->model->criar();
-        $this->load->view('elementos/cadastro_livro');
-
-        $this->load->view('common/footer');
-    }
-
     public function contato(){
         $this->load->helper('form');
         $this->load->view('common/header');

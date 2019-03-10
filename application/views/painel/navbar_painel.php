@@ -7,13 +7,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" target='_blank' href="<?php echo site_url();?>">Ver site
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('mudar')?>">Alterar Site</a>
+        <a class="nav-link" href="<?php echo site_url('setup/mudar')?>">Alterar Site</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('setup')?>">configs</a>
