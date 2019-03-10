@@ -66,5 +66,15 @@ class Livraria extends CI_Controller {
         $this->load->view('common/footer');
     }
 
+    public function detalhar($id){
+        $this->load->view('common/header');
+        $this->load->view('common/navbar');
+        $this->load->model('LivroModel');
+        $data = $this->LivroModel->livro_data($id);
+        $v['livro'] = $this->load->view('elementos/detalhes',$data,true);
+        $this->load->view('elementos/layout_detalhar',$v);
+        $this->load->view('common/footer');
+    }
+
 }
 ?>

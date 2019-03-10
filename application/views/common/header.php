@@ -12,5 +12,4 @@
   <link href="<?= base_url('assets/mdb/css/style.css') ?>" rel="stylesheet">
 </head>
 
-<body>
-<div class="bg">
+<body class="indigo lighten-5">

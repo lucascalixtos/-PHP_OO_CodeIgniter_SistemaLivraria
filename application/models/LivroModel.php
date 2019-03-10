@@ -33,7 +33,7 @@ include_once APPPATH.'libraries/Livro.php';
             $html .= '<th scope="col">'.$row['titulo'].'</th>';
             $html .= '<th scope="col">'.$row['autor'].'</th>';
             $html .= '<th scope="col">'.$row['genero'].'</th>';
-            $html .= '<th><button type="button" class="btn btn-dark">R$'.$row['preco'].',00</button></th></tr>';
+            $html .= '<th><a href="'.base_url('livraria/detalhar/'.$row['id']).'"><button type="button" class="btn btn-dark">R$'.$row['preco'].',00</button></a></th></tr>';
             }
                 $html .= '</table>';
                 return $html;
@@ -84,7 +84,15 @@ include_once APPPATH.'libraries/Livro.php';
             public function delete($id){
                 $livro = new Livro();
                 $livro->delete($id);
-            }        
+            } 
+            
+            
+    public function livro_data($id){
+        $sql = "SELECT * FROM livros WHERE id = $id";
+        $res = $this->db->query($sql);
+        $data = $res->result_array();
+        return $data[0];
+    }
     }
 
 

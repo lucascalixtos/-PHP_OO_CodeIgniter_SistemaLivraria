@@ -51,6 +51,7 @@ class Livro{
         $this->db->delete('livros', "id = $id");
     }
 
+
      /*public function exibe($id){
         $sql = "SELECT * FROM livros WHERE 'id = $id'";
         $res = $this->db->query($sql);
