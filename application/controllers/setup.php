@@ -208,4 +208,17 @@ class Setup extends CI_Controller{
         $this->load->view('common/footer');
     }
 
+    public function modifica_texto(){
+        $this->load->view('common/header');
+        $this->load->view('painel/navbar_painel');
+        $this->load->view('painel/mininav');
+        $this->load->view('painel/mininav2');
+        //Form cards
+        $this->load->model('TextoModel');
+        $this->TextoModel->criar();
+        $v['form'] = $this->load->view('painel/texto_form','', TRUE);
+        $this->load->view('painel/modifica_inicio', $v);
+        $this->load->view('common/footer');
+    }
+
 }

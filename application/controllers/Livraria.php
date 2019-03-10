@@ -12,12 +12,15 @@ class Livraria extends CI_Controller {
         
         $this->load->model('CardModel');
         $card = $this->CardModel->card_select();
-        redirect('livraria/inicio/'.$carrossel.'/'.$card.'', 'refresh');
+
+        $this->load->model('TextoModel');
+        $texto = $this->TextoModel->texto_select();
+        redirect('livraria/inicio/'.$carrossel.'/'.$card.'/'.$texto.'', 'refresh');
 
         $this->load->view('common/footer');
     }
 
-    public function inicio($carrossel, $card){
+    public function inicio($carrossel, $card, $texto){
 		$this->load->view('common/header');
         $this->load->view('common/navbar');
 
@@ -29,10 +32,9 @@ class Livraria extends CI_Controller {
         $data = $this->CardModel->card_data($card);
         $v['card'] = $this->load->view('elementos/card_group',$data,true);
 
-        $v['titulo'] = '<h1> Bem vindo a livraria nobel</h2>';
-        $v['texto'] =  '<p>A Livraria Nobel é uma empresa fundada em São Paulo no ano de 1943 pelo 
-        italiano Cláudio Milano. A rede de franquias Nobel oferece aos seus clientes o melhor do mercado literário, além de papelaria e presentes em suas mais de 220 lojas espalhadas pelo Brasil e no exterior.</p>';
-        $v['card_group'] = $this->load->view('elementos/card_group','',true);
+        $this->load->model('TextoModel');
+        $data = $this->TextoModel->texto_data($card);
+        $v['texto_inicio'] = $this->load->view('elementos/texto_inicio',$data,true);
         $this->load->view('elementos/layout', $v);
 		$this->load->view('common/footer');
     }

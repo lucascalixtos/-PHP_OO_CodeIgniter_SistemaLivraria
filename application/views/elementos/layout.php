@@ -6,13 +6,12 @@
 <div class="container mx-auto mt-4 text-center wow fadeInUp">
     <div class="row">
         <div class="col-md-12">
-            <?= $titulo ?>
-            <?= $texto ?>
+            <?= $texto_inicio ?>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <?= $card_group ?>
+            <?= $card?>
         </div>
     </div>
 </div>
