@@ -10,7 +10,7 @@
                 <span class="input-group-text">Selecione a imagem 1</span>
             </div>
             <div class="custom-file">
-                <input type="file" class="custom-file-input" name="img1" id="img1" aria-describedby="fileInput">
+                <input type="file" class="custom-file-input" name="img1" id="img1" value="" aria-describedby="fileInput">
                 <label class="custom-file-label" for="file-with-current"></label>
             </div>
         </div>

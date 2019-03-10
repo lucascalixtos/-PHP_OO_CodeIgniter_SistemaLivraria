@@ -13,7 +13,16 @@
         
         <input type="text" value="<?= isset($livro['idioma']) ? $livro['idioma'] : '' ?>" name="idioma" id="idioma" class="form-control" placeholder="Idioma">
 
-        <input type="text" value="<?= isset($livro['capa']) ? $livro['capa'] : '' ?>" name="capa" id="capa" class="form-control" value=".jpg" placeholder="Capa">
+       <!-- <input type="text" value="" name="capa" id="capa" class="form-control" value=".jpg" placeholder="Capa"> -->
+       <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="capa" name="capa" value="<?= isset($livro['capa']) ? $livro['capa'] : '' ?>"aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01"></label>
+        </div>
+    </div>
         
         <input type="text" value="<?= isset($livro['descr']) ? $livro['descr'] : '' ?>" name="descr" id="descr" class="form-control" placeholder="Descrição">
         

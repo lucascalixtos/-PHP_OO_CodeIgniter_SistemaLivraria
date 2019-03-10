@@ -1,43 +1,33 @@
 <!--Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark default-color">
-  <a class="navbar-brand" href="<?php echo site_url()?>">Nobel</a>
+<nav class="navbar navbar-expand-lg elegant-color-dark text-secondary">
+  <a class="navbar-brand text-secondary" href="<?php echo site_url()?>">Nobel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url();?>">Inicio
+  <div class="collapse navbar-collapse text-secondary" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto text-secondary">
+      <li class="nav-item active text-secondary">
+        <a class="nav-link text-secondary" href="<?php echo site_url();?>">Inicio
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('livros')?>">Livros</a>
+      <li class="nav-item text-secondary">
+        <a class="nav-link text-secondary" href="<?php echo site_url('livros')?>">Livros</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('contato')?>">Contato</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">Dropdown
-        </a>
-        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <li class="nav-item text-secondary">
+        <a class="nav-link text-secondary" href="<?php echo site_url('contato')?>">Contato</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-twitter"></i>
+        <a class="nav-link waves-effect waves-light" href="https://www.facebook.com/Livrarianobel/">
+          <i class="fab fa-facebook"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-google-plus-g"></i>
+        <a class="nav-link waves-effect waves-light" href="http://livrarianobel.com.br/">
+        <i class="fas fa-book"></i>
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -46,9 +36,7 @@
           <i class="fas fa-user"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="<?= base_url('setup')?>">Painel Administrativo</a>
         </div>
       </li>
     </ul>

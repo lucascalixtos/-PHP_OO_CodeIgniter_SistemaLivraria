@@ -1,7 +1,7 @@
 <h5 class='p-2 m-2 bg-warning text-white text-center'><?= $titulo ?></h5>			  
 			  <div class='container text-black'>
 			  		<div class='row m-2 p-2'>
-			        	<div class='col text-center my-auto'><img src='<?= $capa ?>' width='250' /></div>
+			        	<div class='col text-center my-auto'><img src='<?= base_url('assets/img/'.$capa) ?>' width='250' /></div>
 			        </div>
                     <div class='row'>
 						<div class='col'>
@@ -24,7 +24,12 @@
 							<div class='text-center font-weight-bold my-auto'>Valor: </div>
 						  	<div class='text-center'>R$ <?= $preco ?></div>
 					  	</div>
-
+					</div>
+					<div class="row mt-3">
+						<div class='col'>
+							<div class='text-center font-weight-bold my-auto'>Descrição: </div>
+						  	<div class='text-center'><?= $descr ?></div>
+					  	</div>
 					</div>
 			  </div>
 			<br />

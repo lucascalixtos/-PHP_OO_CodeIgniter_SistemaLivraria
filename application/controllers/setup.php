@@ -53,6 +53,8 @@ class Setup extends CI_Controller{
     public function login(){
         $this->load->view('common/header');
         $this->load->view('common/navbar');
+        set_msg('<p>Usuario Padrão: lucas</p>
+        <p>Senha: 123456</p>');
         if($this->option->get_option('setup_executado') != 1):
             redirect('setup/instalar','refresh');
         endif;
